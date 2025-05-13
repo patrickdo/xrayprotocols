@@ -1,5 +1,5 @@
 var request = new XMLHttpRequest();
-request.open('GET', 'DHAI_Referral_Guide.csv'); // previous CT/MR protocols CSV was created by opening "CT protocols list" GSheet, Select All, Copy, Paste into Excel, Save as CSV.
+request.open('GET', 'xrayprotocols.csv'); // previous CT/MR protocols CSV was created by opening "CT protocols list" GSheet, Select All, Copy, Paste into Excel, Save as CSV.
 request.overrideMimeType("text/plain");
 request.send();
 request.onreadystatechange = function() {
