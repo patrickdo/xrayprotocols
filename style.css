@@ -1,6 +1,16 @@
+/* ==========================================
+	1. VARIABLES & TYPOGRAPHY
+   ========================================== */
+
+@font-face {
+	font-family: "trade-gothic-next";
+	src: url("Resources/trade-gothic-lt-std.otf") format("opentype");
+	font-display: swap;
+}
+
 :root {
-	--DignityOrange: rgb(247,121,0); /* "Dignity Orange" from the indications pdf */
-	--DignityFontFamily: "trade-gothic-next","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	--DignityOrange: rgb(247, 121, 0); /* "Dignity Orange" from the indications pdf */
+	--DignityFontFamily: "trade-gothic-next", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 body {
@@ -8,19 +18,36 @@ body {
 	font-weight: 500;
 }
 
+/* ==========================================
+2. HEADER & PAGE TITLE
+   ========================================== */
+
+.page-title {
+	font-size: xx-large;
+	font-weight: bold;
+}
+
+.updated-date {
+	float: right;
+	font-size: small;
+}
+
+/* ==========================================
+	3. TABLE LAYOUT
+   ========================================== */
+
 table {
 	border: 1px solid #CCC;
 	font-size: medium;
 	border-collapse: collapse;
-	background-color: rgb(217,217,217);
+	background-color: rgb(217, 217, 217);
 	width: 100%;
-	table-layout: fixed;
-	/* width: 980px; */
 }
 
 td {
 	padding: 10px;
-	border: 1px solid #ccc;
+	border: 1px solid #CCC;
+	vertical-align: top;
 }
 
 th {
@@ -33,20 +60,16 @@ th {
 }
 
 tbody tr:hover {
-	background: rgb(191,191,191);
+	background: rgb(191, 191, 191);
 }
 
-.page-title {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: flex-start; */
-	font-size: xx-large;
-	font-weight: bold;
-}
+/* ==========================================
+	4. COLUMN WIDTHS
+   ========================================== */
 
-.updated-date {
-	float: right;
-	font-size: small;
+.bodyregionCol {
+	width: 15%;
+	white-space: nowrap;
 }
 
 .procedureCol {
@@ -54,25 +77,44 @@ tbody tr:hover {
 }
 
 .reasonCol {
-	width: 65%;
+	width: 60%;
 }
 
+/* ==========================================
+	5. SEARCH INPUT & UTILITIES
+   ========================================== */
+
 .search {
-	background: #ffffff url('Resources/magnifying-glass-128.png') no-repeat 16px/16px;
-	background-position: 3px 3px;
-	padding-left: 22px !important;
-	height: 20px;
-	line-height: 20px;
-	font-size: 16px;
+	width: 100%;
+	max-width: 380px;
+	height: 30px;
+	line-height: 30px;
+	padding: 4px 10px 4px 28px;
+	font-size: 14px;
+	font-family: inherit;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background: #ffffff url('Resources/magnifying-glass-128.png') no-repeat 6px center / 14px 14px;
+}
+
+.search:focus {
+	outline: none;
+	border-color: #333333;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dynamic search term highlight */
+mark.highlight {
+	background-color: #ffe066;
+	color: #000000;
+	padding: 1px 3px;
+	border-radius: 2px;
+	font-weight: bold;
 }
 
 .normalText {
 	font-size: medium;
 	font-style: normal;
 	font-weight: normal;
-}
-
-@font-face {
-	font-family: "trade-gothic-next";
-	src: url(Resources/trade-gothic-lt-std.otf);
 }
