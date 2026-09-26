@@ -57,10 +57,6 @@ tbody tr:hover {
 	width: 65%;
 }
 
-.CPTCol {
-	width: 10%;
-}
-
 .search {
 	background: #ffffff url('Resources/magnifying-glass-128.png') no-repeat 16px/16px;
 	background-position: 3px 3px;
