@@ -108,9 +108,7 @@ tbody tr:hover {
 mark.highlight {
 	background-color: #ffe066;
 	color: #000000;
-	padding: 1px 3px;
 	border-radius: 2px;
-	font-weight: bold;
 }
 
 .normalText {
