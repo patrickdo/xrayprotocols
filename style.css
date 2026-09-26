@@ -174,3 +174,22 @@ tbody tr:hover {
 .reasonCol {
 	width: 60%;
 }
+
+/* Active / Current Page Chip */
+.chip.active,
+.chip[aria-current="page"] {
+	background-color: var(--DignityOrange);
+	color: #ffffff;
+	border: 1px solid #000000;
+	font-weight: 600;
+	cursor: default;
+	pointer-events: none;
+	translate: 0 0;
+}
+
+.chip.active:hover,
+.chip[aria-current="page"]:hover {
+	background-color: var(--DignityOrange);
+	border: 1px solid #000000;
+	translate: 0 0;
+}
