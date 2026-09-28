@@ -1,50 +1,53 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Cache-control" content="max-age=600">
 	<title>DHAI X-ray Protocols</title>
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen">
 	<link rel="shortcut icon" type="image/png" href="Resources/hashtag_icon.png">
 	<link rel="icon" type="image/png" href="Resources/hashtag_icon.png">
 </head>
 
 <body>
 
-	<div class="page-title">
-		DHAI X-ray Protocols
-		<span class="updated-date">
-			Updated: 9/25/2026 <!-- UPDATED DATE -->
-			<div class="resource-bar-compact">
-				<div class="resource-row">
-					<span class="bar-label">Resources:</span>
-					<a href="https://patrickdo.github.io/referralbinder/" class="chip">Referral Guide</a>
-				</div>
-				<div class="resource-row">
-					<span class="bar-label">Protocols:</span>
-					<a class="chip active" aria-current="page">X-ray</a>					
-					<a href="https://patrickdo.github.io/usprotocols/" class="chip">US</a>
-					<a href="https://apps.mrgschedule.com/ctprotocols/" class="chip">CT/MRI</a>
-				</div>
-			</div>
+<div class="page-title">
+	DHAI X-ray Protocols
+	<span class="updated-date">
+		Updated: 9/28/2026 <!-- UPDATED DATE -->
+		<span class="resource-bar-compact">
+			<span class="resource-row">
+				<span class="bar-label">Resources:</span>
+				<a href="https://patrickdo.github.io/referralbinder/" class="chip">Referral Guide</a>
+			</span>
+			<span class="resource-row">
+				<span class="bar-label">Protocols:</span>
+				<a class="chip active" aria-current="page">X-ray</a>
+				<a href="https://patrickdo.github.io/usprotocols/" class="chip">US</a>
+				<a href="https://apps.mrgschedule.com/ctprotocols/" class="chip">CT/MRI</a>
+			</span>
 		</span>
-	</div>
+	</span>
+</div>
 
-	<P>Start typing in the search box to narrow down the list.</P>
+	<p>Start typing in the search box to narrow down the list.</p>
 
 	<div id="protocolDIV">
 		<table id="main">
-			<tr>
-				<th colspan="3">
-					<input class="search" placeholder="Search" aria-label="inputSearch" autofocus/> 
-				</th>
-			</tr>
+			<thead>
+				<tr>
+					<th colspan="3">
+						<input class="search" type="search" placeholder="Search" aria-label="Search X-ray protocols" autofocus>
+					</th>
+				</tr>
 
-			<tr style="position: sticky; top: 0; background-color: #fff; z-index: 1;">
-				<th class="bodyregionCol">Body Part</th>
-				<th class="procedureCol">Exam Description</th>
-				<th class="reasonCol">Full Protocol</th>
-			</tr>
+				<tr style="position: sticky; top: 0; background-color: #fff; z-index: 1;">
+					<th class="bodyregionCol">Body Part</th>
+					<th class="procedureCol">Exam Description</th>
+					<th class="reasonCol">Full Protocol</th>
+				</tr>
+			</thead>
 
 			<tbody class="list">
 			<!-- not compatible with td colspan -->
@@ -55,7 +58,14 @@
 					<td class="procedureTD">Loading...</td>
 					<td class="reasonTD">Loading...</td>
 				</tr>
+			</tbody>
 
+			<tbody class="no-result" style="display:none;">
+				<tr>
+					<td colspan="3" style="padding: 20px; font-weight:bold; color: #555;">
+						No matching results.
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>

@@ -13,6 +13,15 @@ const options = {
 
 const protocolList = new List('protocolDIV', options);
 
+// Toggle "No results found" banner
+protocolList.on('updated', (list) => {
+    const noResultElem = document.querySelector('.no-result');
+    if (!noResultElem) return;
+
+    const hasNoMatches = list.searched && list.matchingItems.length === 0;
+    noResultElem.style.display = hasNoMatches ? 'table-row-group' : 'none';
+});
+
 // Dynamic search term highlighting
 protocolList.on('searchComplete', function (list) {
 	const searchInput = document.querySelector('#protocolDIV .search');
